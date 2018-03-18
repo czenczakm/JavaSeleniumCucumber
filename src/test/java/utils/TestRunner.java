@@ -1,7 +1,11 @@
 package utils;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import org.junit.runner.RunWith;
+import cucumber.api.junit.Cucumber;
+import org.junit.runners.Parameterized;
+
+@RunWith(Cucumber.class)
 
 @CucumberOptions(
         strict = false,
@@ -15,5 +19,5 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
                 "rerun:target/cucumber-reports/rerun.txt"
         })
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunner {
 }

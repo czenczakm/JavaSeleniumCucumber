@@ -5,20 +5,19 @@ import org.apache.log4j.Logger;
 public class Log {
     private static final Logger log = Logger.getLogger(Log.class.getName());
 
-    public static void startTestCase(String sTestCaseName) {
-        Log.info("****************************************************************************************");
-        Log.info("****************************************************************************************");
-        Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
-        Log.info("****************************************************************************************");
-        Log.info("****************************************************************************************");
+    public static void startTestCase(String scenarioName) {
+        Log.info("\n---------------------------BEGIN------------------------------------");
+        Log.info("|                                                                     |");
+        Log.info("    Starting - " + scenarioName);
+        Log.info("|                                                                     |");
+        Log.info("--------------------------------------------------------------------");
     }
 
-    public static void endTestCase(String sTestCaseName) {
-        Log.info("XXXXXXXXXXXXXXXXXXXXXXX             " + "-E---N---D-" + "             XXXXXXXXXXXXXXXXXXXXXX");
-        Log.info("X");
-        Log.info("X");
-        Log.info("X");
-        Log.info("X");
+    public static void endTestCase(String scenarioName, String result) {
+        Log.info("-----------------------------------------------------------------------");
+        Log.info("    " + scenarioName + " Status - " + result);
+        Log.info("|                                                                     |");
+        Log.info("------------------------------END-----------------------------------\n");
     }
 
     public static void info(String message) {

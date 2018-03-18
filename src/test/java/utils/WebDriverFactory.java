@@ -12,7 +12,7 @@ public class WebDriverFactory {
 
     private static final long implicit_wait_timeout = 5;
     private static final int script_timeout = 5;
-    private static WebDriver driver;
+    protected static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver != null) {
@@ -43,6 +43,9 @@ public class WebDriverFactory {
                 case "chrome":
                     driver = new ChromeDriver();
                     break;
+//                case "htmlunit":
+//                    driver = new HtmlUnitDriver();
+//                    break;
                 default:
                     throw new IllegalStateException("Unsupported browser type");
             }
